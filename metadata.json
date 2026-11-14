@@ -1,0 +1,7 @@
+{
+  "name": "Fundi Connect",
+  "description": "Location-based marketplace and USSD (*384*45#) offline portal connecting Kenyans with NITA-certified Jua Kali artisans via proximity matching, M-Pesa escrow protection, and feature-phone accessibility.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

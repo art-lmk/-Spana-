@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  
+  <!-- Outer glowing ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#334155" stroke-width="6" stroke-dasharray="8 6"/>
+
+  <!-- Shield Base for Verification -->
+  <path d="M256 95 L375 145 C375 255 256 365 256 365 C256 365 137 255 137 145 Z" fill="url(#accent)" opacity="0.95"/>
+  
+  <!-- Inner Shield Highlight -->
+  <path d="M256 120 L350 160 C350 245 256 335 256 335 C256 335 162 245 162 160 Z" fill="#0f172a" opacity="0.85"/>
+
+  <!-- Wrench & Hammer Cross in center -->
+  <!-- Wrench -->
+  <path d="M220 205 L260 245 L245 260 L205 220 C198 223 189 222 183 216 C176 209 174 199 178 190 L195 207 L207 195 L190 178 C199 174 209 176 216 183 C222 189 223 198 220 205 Z" fill="#f8fafc"/>
+  <path d="M245 260 L310 325 C314 329 320 329 324 325 C328 321 328 315 324 311 L259 246 Z" fill="#f8fafc"/>
+
+  <!-- Verified Check / Star Badge -->
+  <circle cx="330" cy="180" r="32" fill="url(#shield)"/>
+  <path d="M318 180 L327 189 L344 171" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Brand Typography -->
+  <text x="256" y="435" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" fill="#ffffff" letter-spacing="2">FUNDI</text>
+  <text x="256" y="470" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="700" fill="#f97316" letter-spacing="4">CONNECT</text>
+</svg>
