@@ -3,6 +3,7 @@ import { Search, MapPin, Phone, ArrowRight, Wrench } from 'lucide-react';
 import { LocationCoordinates } from '../types';
 import { POPULAR_LOCATIONS } from '../data/mockFundis';
 import heroCraftsmanImg from '../assets/images/spana_hero_craftsman_1794587925809.jpg';
+import { StoreBadges } from './StoreBadges';
 
 interface LandingHeroProps {
   userLocation: LocationCoordinates;
@@ -144,6 +145,12 @@ export const LandingHero: React.FC<LandingHeroProps> = ({
                 <Phone className="w-4 h-4 text-[#F86828]" />
                 <span>No smartphone? Dial <strong className="font-mono text-[#303C43]">*384*45#</strong></span>
               </button>
+            </div>
+
+            {/* Mobile App Install Badges (Google Play / App Store) */}
+            <div className="pt-1 flex flex-wrap items-center gap-3">
+              <span className="text-xs font-semibold text-[#303C43]/70">Get the app:</span>
+              <StoreBadges compact />
             </div>
 
             {/* Grounded Numeric Summary */}

@@ -2934,6 +2934,26 @@ Tumetuma pia ujumbe mfupi (SMS) kwa nambari yako.`;
     }
   });
 
+  // Google Play Trusted Web Activity (TWA) Digital Asset Links endpoint
+  app.get('/.well-known/assetlinks.json', (_req, res) => {
+    const assetLinksPath = path.join(process.cwd(), 'public', '.well-known', 'assetlinks.json');
+    if (fs.existsSync(assetLinksPath)) {
+      res.setHeader('Content-Type', 'application/json');
+      res.sendFile(assetLinksPath);
+      return;
+    }
+    res.json([
+      {
+        relation: ['delegate_permission/common.handle_all_urls'],
+        target: {
+          namespace: 'android_app',
+          package_name: 'ke.co.spana.app',
+          sha256_cert_fingerprints: ['REPLACE_WITH_GOOGLE_PLAY_APP_SIGNING_SHA256_FINGERPRINT']
+        }
+      }
+    ]);
+  });
+
   // Vite middleware for development vs static dist for production
   const distPath = path.join(process.cwd(), 'dist');
   const hasDist = fs.existsSync(path.join(distPath, 'index.html'));

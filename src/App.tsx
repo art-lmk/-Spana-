@@ -15,6 +15,7 @@ import { AboutSection } from './components/AboutSection';
 import { HowItWorksSection } from './components/HowItWorksSection';
 import { SignInModal } from './components/SignInModal';
 import { SpanaLogo } from './components/SpanaLogo';
+import { StoreBadges } from './components/StoreBadges';
 import { AdminPortal } from './components/admin/AdminPortal';
 import { ArtisanDashboard } from './components/ArtisanDashboard';
 import { FundiCard } from './components/FundiCard';
@@ -1547,6 +1548,8 @@ export default function App() {
             <span className="hidden sm:inline text-[#303C43]/25">|</span>
             <span>Spana Kenya · Verified Trade Professionals</span>
           </div>
+
+          <StoreBadges compact />
 
           <div className="flex flex-wrap items-center justify-center gap-5 text-xs font-medium text-[#303C43]/80">
             {currentUser ? (
